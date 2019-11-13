@@ -10,12 +10,20 @@ $(document).ready(function(){
 	  centerMode: true,
       centerPadding: "1px",
       responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
+		    {
+		      breakpoint: 991,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 680,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
         ]
 	});
 	$('.main-slider').slick({
@@ -40,6 +48,12 @@ $(document).ready(function(){
 	    });
 	});
 	document.getElementsByClassName("send").onclick = sendf();
+
+	  $('.third-button').on('click', function () {
+
+    $('.animated-icon3').toggleClass('open');
+  });
+	  
 });
 
 function sendf(){
